@@ -1,0 +1,14 @@
+name: Uses Sentinel
+description: A GitHub Action that checks if any action in your workflows uses unsafe versions or outdated actions.
+author: Your Name
+branding:
+  icon: alert-circle
+  color: red
+
+runs:
+  using: 'docker'
+  image: 'docker://bash:latest'
+  entrypoint: 'sh'
+  args:
+    - '-c'
+    - './entrypoint.sh'
