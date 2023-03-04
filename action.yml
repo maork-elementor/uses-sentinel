@@ -14,7 +14,6 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://bash:latest'
-  entrypoint: 'sh'
   env:
     EXCLUDE: ${{ inputs.exlude }}
   args:
