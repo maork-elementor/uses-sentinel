@@ -13,12 +13,14 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://alpine/git:latest'
+  image: 'docker://bash:latest'
   env:
     EXCLUDE: ${{ inputs.exlude }}
   args:
     - '-c'
     - |
+      apt-get update && apt-get install -y git
+
       YMLS=$(find ./.github/workflows -name "*.yml" -type f)
       BAD_VERSIONS=("main" "master" "latest")
 
