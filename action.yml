@@ -1,13 +1,13 @@
-name: Uses Sentinel
+name: uses-sentinel
 description: A GitHub Action that checks if any action in your workflows uses unsafe versions or outdated actions.
-author: Your Name
+author: Maor Kavod
 branding:
   icon: alert-circle
   color: red
 
 inputs:
   exlude:
-    description: 'A list of actions to exclude from the check'
+    description: 'A list of actions paths to exclude from the check'
     required: false
     default: ''
 
