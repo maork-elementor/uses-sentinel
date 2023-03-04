@@ -5,10 +5,18 @@ branding:
   icon: alert-circle
   color: red
 
+inputs:
+  exlude:
+    description: 'A list of actions to exclude from the check'
+    required: false
+    default: ''
+
 runs:
   using: 'docker'
   image: 'docker://bash:latest'
   entrypoint: 'sh'
+  env:
+    EXCLUDE: ${{ inputs.exlude }}
   args:
     - '-c'
     - './entrypoint.sh'

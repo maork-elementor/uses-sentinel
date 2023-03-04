@@ -27,7 +27,18 @@ jobs:
 * This will run Uses Sentinel on every pull request in your repository.
 
 ## Inputs
-Uses Sentinel does not have any inputs.
+```
+jobs:
+  uses-sentinel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uses Sentinel
+        uses: maork-elementor/uses-sentinel@v1
+        with:
+          exlude:'exlude.yml,exlude2.yml,exlude3.yml'
+```
+exlude - list of files to exlude from the scan
+
 
 ## Output Example
 Here's an example output from Uses Sentinel:

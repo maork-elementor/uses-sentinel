@@ -8,6 +8,11 @@ NOT_UPDATED_RESULT=""
 
 for yml in $YMLS; do
   USES=$(grep -o 'uses:.*' "$yml" | cut -d' ' -f2)
+
+  for exclude in $EXCLUDE; do
+    USES=$(echo "$USES" | grep -v "$exclude")
+  done
+
   for use in $USES; do
     if [[ $use == *"@"* ]]; then
       current_version=$(echo $use | cut -d'@' -f2 | awk '{gsub(/\^\{\}/,""); print}')
