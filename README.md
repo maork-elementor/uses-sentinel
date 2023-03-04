@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Uses Sentinel
-        uses: maork-elementor/uses-sentinel@v1
+        uses: maork-elementor/uses-sentinel@1.0.0
         with:
           exlude:'exlude.yml,exlude2.yml,exlude3.yml'
 ```
