@@ -1,5 +1,5 @@
-FROM alpine:3.7
+FROM ubuntu:20.04
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN apk add --no-cache git
+RUN apt-get update && apt-get install -y git
 ENTRYPOINT ["/entrypoint.sh"]
