@@ -27,7 +27,7 @@ jobs:
 * This will run Uses Sentinel on every pull request in your repository.
 
 ## Inputs
-```
+```yaml
 jobs:
   uses-sentinel:
     runs-on: ubuntu-latest
