@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Uses Sentinel
-        uses: maork-elementor/uses-sentinel@v1
+        uses: maork-elementor/uses-sentinel@1.0.0
 ```
 
 * This will run Uses Sentinel on every pull request in your repository.
